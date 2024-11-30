@@ -2,7 +2,7 @@ public class Primes {
     public static void main(String[] args) {
         int num = Integer.parseInt(args[0]);
         int count = 0;
-        System.out.println("Prime numbers up to" + num + ":");
+        System.out.println("Prime numbers up to " + num + ":");
 
         for (int i = 2; i <= num; i++)
         {
