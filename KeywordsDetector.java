@@ -14,7 +14,7 @@ public class KeywordsDetector {
             "Effective presentations must be clear, concise, and humble" 
         };
         // Some keywords that typically signal bullshit contents in business presentations 
-        String[] keywords = {"transform", "leverage", "disrupt", "synergy", "Paradigm"};
+        String[] keywords = {"transform", "leverage", "disrupt", "Synergy", "paradigm"};
         detectAndPrint(sentences, keywords);
     }
 
@@ -31,7 +31,7 @@ public class KeywordsDetector {
 
                 for (int k = 0; k < wordsCount(sentences[j]); k++)
                 {
-                    if (keywords[i].toLowerCase().equals(wordsInsentence[k]))
+                    if (keywords[i].equals(wordsInsentence[k]))
                     {
                         System.out.println(sentences[j] + "");
                     }
