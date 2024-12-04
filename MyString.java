@@ -23,7 +23,7 @@ public class MyString {
         {
             char c = str.charAt(i);
             if (c >= 'A' && c <= 'Z'){
-				newStr = newStr + (char)(c+ 32);
+				newStr = newStr + (char)(c + 32);
 			}
 			else {
 				newStr = newStr + str.charAt(i);
@@ -41,22 +41,25 @@ public class MyString {
             return true;
         }
         
-        int i = 0;
-        while (str1.charAt(i) != str2.charAt(0))
+        for (int i = 0; i < str1.length() - str2.length(); i++)
         {
-            i++;
-            if (i == str1.length()){
+            if (str1.length() - i < str1.length() - str2.length()){
                 return false;
+            }
+            if (Check(str1, str2, i) == true){
+                return true;
             }
         }
-        int j = 0;
-        while (j < str2.length() && i < str1.length())
+        return false;
+    }
+
+    public static boolean Check(String str1, String str2, int place) {
+        for (int i = 0; i < str2.length(); i++)
         {
-            if (str1.charAt(i) != str2.charAt(j)) {
+            if (str1.charAt(place) != str2.charAt(i)){
                 return false;
             }
-            i++;
-            j++;
+            place++;
         }
         return true;
     }

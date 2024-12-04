@@ -61,13 +61,11 @@ public class ArrCharOps {
      *  If no such character is found, returns -1.
      */
     public static int indexOf(char[] arr, char ch) {
-        int i = 0;
-        while (charAt(arr, i) != ch && i < arr.length)
+        for (int i = 0; i < arr.length; i++)
         {
-            i++;
-        }
-        if (i < arr.length){
-            return i;
+            if (charAt(arr, i) == ch){
+                return i;
+            }
         }
         return -1;
     }
@@ -75,13 +73,11 @@ public class ArrCharOps {
     /** Same as indexOf(char[], char), but starts the search in the given index.
      */
     public static int indexOf(char[] arr, char ch, int fromIndex) {
-        int i = fromIndex;
-        while (charAt(arr, i) != ch && i < arr.length)
+        for (int i = fromIndex; i < arr.length; i++)
         {
-            i++;
-        }
-        if (i < arr.length){
-            return i;
+            if (charAt(arr, i) == ch){
+                return i;
+            }
         }
         return -1;
     }
@@ -90,13 +86,11 @@ public class ArrCharOps {
      *  If no such character is found, returns -1.
      */
     public static int lastIndexOf(char[] arr, char ch) {
-        int i = arr.length - 1;
-        while (charAt(arr, i) != ch && i >= 0)
+        for (int i = arr.length - 1; i >= 0; i--)
         {
-            i--;
-        }
-        if (i < arr.length){
-            return i;
+            if (charAt(arr, i) == ch){
+                return i;
+            }
         }
         return -1;
     }
@@ -177,6 +171,9 @@ public class ArrCharOps {
      */
     public static int compareTo(String str1, String str2) {
         int i = 0;
+        if (str1.isEmpty() || str2.isEmpty()){
+            return -2;
+        }
         while (i < str1.length() && i < str2.length())
         {
             if (str1.charAt(i) > str2.charAt(i)){
