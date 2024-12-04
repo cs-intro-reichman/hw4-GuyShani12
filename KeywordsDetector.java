@@ -8,7 +8,7 @@ public class KeywordsDetector {
             "Let's talk about data and algorithms",
             "Chatbots are great but must be used carefully", 
             "This blockchain-based solution will disrupt the industry", //disrupt
-            "The team showed great synergy in the last project", //synergy
+            "The team showed great Synergy in the last project", //synergy
             "Use simple words without hype and fluff",
             "Our new technology presents a significant paradigm shift", //paradigm
             "Effective presentations must be clear, concise, and humble" 
