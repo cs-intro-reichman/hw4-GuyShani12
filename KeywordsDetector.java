@@ -31,7 +31,7 @@ public class KeywordsDetector {
 
                 for (int k = 0; k < wordsCount(sentences[j]); k++)
                 {
-                    if (keywords[i].toLowerCase().equals(wordsInsentence[k].toLowerCase()))
+                    if (keywords[i].toLowerCase().equals(wordsInsentence[k]))
                     {
                         System.out.print(keywords[i] + ", ");
                     }
