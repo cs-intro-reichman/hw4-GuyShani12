@@ -33,7 +33,7 @@ public class KeywordsDetector {
                 {
                     if (keywords[i].toLowerCase().equals(wordsInsentence[k]))
                     {
-                        System.out.println(sentences[i] + "");
+                        System.out.println(sentences[k] + "");
                     }
                 }
             }
